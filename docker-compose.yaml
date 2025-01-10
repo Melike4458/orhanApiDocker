@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  orhan_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5044:5044"
+    volumes:
+      - ./var:/var  # Loglar ve kullanıcı verileri için var klasörü bağlanıyor
+      - .:/app      # Proje klasörü bağlanıyor
